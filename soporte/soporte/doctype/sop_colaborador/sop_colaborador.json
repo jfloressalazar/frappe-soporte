@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "COLAB-.####",
+ "creation": "2025-09-19 09:05:43.643003",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre_colaborador",
+  "correo_colaborador",
+  "telefono_colaborador",
+  "nivel",
+  "column_break_xejv",
+  "link_cargo",
+  "unidad",
+  "dependencia",
+  "cargo"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre_colaborador",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de colaborador",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correo_colaborador",
+   "fieldtype": "Data",
+   "label": "Correo del colaborador",
+   "reqd": 1
+  },
+  {
+   "fieldname": "telefono_colaborador",
+   "fieldtype": "Data",
+   "label": "Tel\u00e9fono del colaborador"
+  },
+  {
+   "fieldname": "nivel",
+   "fieldtype": "Data",
+   "label": "Nivel"
+  },
+  {
+   "fieldname": "column_break_xejv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "link_cargo",
+   "fieldtype": "Link",
+   "label": "Cargo del colaborador",
+   "options": "SOP-CARGOCOLABORADOR",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "link_cargo.unidad",
+   "fieldname": "unidad",
+   "fieldtype": "Data",
+   "label": "Unidad",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "link_cargo.dependencia",
+   "fieldname": "dependencia",
+   "fieldtype": "Data",
+   "label": "Dependencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "link_cargo.nombre_cargo",
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "cargo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-19 09:25:02.889931",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-COLABORADOR",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "unidad,dependencia",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nombre_colaborador"
+}

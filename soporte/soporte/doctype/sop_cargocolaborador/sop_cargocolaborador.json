@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CARCOL-.####",
+ "creation": "2025-09-19 09:03:19.711175",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "link_unidad",
+  "unidad",
+  "dependencia",
+  "nombre_cargo"
+ ],
+ "fields": [
+  {
+   "fieldname": "link_unidad",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unidad",
+   "options": "SOP-UNIDAD",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "link_unidad.nombre_unidad",
+   "fieldname": "unidad",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "unidad"
+  },
+  {
+   "fetch_from": "link_unidad.dependencia",
+   "fieldname": "dependencia",
+   "fieldtype": "Data",
+   "label": "Dependencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nombre_cargo",
+   "fieldtype": "Data",
+   "label": "Nombre del cargo",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-19 09:13:30.879581",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-CARGOCOLABORADOR",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "unidad,dependencia",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nombre_cargo"
+}

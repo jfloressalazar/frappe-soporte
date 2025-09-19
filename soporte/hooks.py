@@ -234,4 +234,12 @@ fixtures = [
             ["name", "like", "SOP-%"]
         ]
     },
+     {
+        "dt": "Workspace",
+        "filters": [
+            ["name", "in", [
+                "Soporte",
+            ]]
+        ]
+    },
 ]

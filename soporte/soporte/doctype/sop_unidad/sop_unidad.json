@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "UNID-.####",
+ "creation": "2025-09-19 09:00:47.102285",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "link_dependencia",
+  "dependencia",
+  "nombre_unidad",
+  "nombre_jefe_unidad"
+ ],
+ "fields": [
+  {
+   "fieldname": "link_dependencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Dependencia",
+   "options": "SOP-DEPENDENCIA",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "link_dependencia.nombre_dependencia",
+   "fieldname": "dependencia",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "dependencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nombre_unidad",
+   "fieldtype": "Data",
+   "label": "Nombre de la Unidad",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombre_jefe_unidad",
+   "fieldtype": "Data",
+   "label": "Nombre de jefe de unidad"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-19 09:26:02.889009",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-UNIDAD",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "dependencia",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nombre_unidad"
+}
