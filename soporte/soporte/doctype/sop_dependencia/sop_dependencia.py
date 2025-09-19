@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class SOP(Document):
+class SOPDEPENDENCIA(Document):
 	pass

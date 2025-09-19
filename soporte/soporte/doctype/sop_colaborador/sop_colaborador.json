@@ -6,6 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "apellidos_colaborador",
+  "nombres_colaborador",
   "nombre_colaborador",
   "correo_colaborador",
   "telefono_colaborador",
@@ -14,15 +16,16 @@
   "link_cargo",
   "unidad",
   "dependencia",
-  "cargo"
+  "cargo",
+  "jefe_inmediato"
  ],
  "fields": [
   {
    "fieldname": "nombre_colaborador",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
-   "label": "Nombre de colaborador",
-   "reqd": 1
+   "label": "Nombre completo de colaborador"
   },
   {
    "fieldname": "correo_colaborador",
@@ -71,11 +74,28 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "cargo"
+  },
+  {
+   "fieldname": "jefe_inmediato",
+   "fieldtype": "Data",
+   "label": "Nombre de jefe inmediato"
+  },
+  {
+   "fieldname": "apellidos_colaborador",
+   "fieldtype": "Data",
+   "label": "Apellidos del colaborador",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombres_colaborador",
+   "fieldtype": "Data",
+   "label": "Nombres del colaborador",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-19 09:25:02.889931",
+ "modified": "2025-09-19 10:03:24.368429",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-COLABORADOR",

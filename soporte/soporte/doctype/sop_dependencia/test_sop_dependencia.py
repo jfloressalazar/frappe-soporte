@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestSOP(FrappeTestCase):
+class TestSOPDEPENDENCIA(FrappeTestCase):
 	pass
