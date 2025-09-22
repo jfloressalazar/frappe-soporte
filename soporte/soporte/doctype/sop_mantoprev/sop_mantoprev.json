@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:MANTO-{MM}-{YYYY}-{###}",
  "creation": "2025-09-22 13:36:30.160936",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -56,6 +57,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:!doc.__islocal",
    "fieldname": "detalle_de_colaboradores_y_equipos_tab",
    "fieldtype": "Tab Break",
    "label": "Detalle de colaboradores y equipos"
@@ -67,6 +69,7 @@
    "options": "SOP-MANTOPREVDETALLECOLAEQUI"
   },
   {
+   "depends_on": "eval:!doc.__islocal",
    "fieldname": "detalle_de_asignaciones_tab",
    "fieldtype": "Tab Break",
    "label": "Detalle de asignaciones"
@@ -90,10 +93,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-22 14:13:41.243035",
+ "modified": "2025-09-22 14:40:20.238177",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-MANTOPREV",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
