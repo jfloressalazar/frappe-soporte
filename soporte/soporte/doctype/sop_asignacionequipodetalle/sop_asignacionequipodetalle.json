@@ -7,7 +7,9 @@
  "engine": "InnoDB",
  "field_order": [
   "equipo",
-  "tipo_equipo"
+  "tipo_equipo",
+  "fecha_inicio",
+  "fecha_fin"
  ],
  "fields": [
   {
@@ -19,18 +21,28 @@
    "reqd": 1
   },
   {
-   "fetch_from": "Equipo.tipo_equipo",
+   "fetch_from": "equipo.tipo_equipo",
    "fieldname": "tipo_equipo",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Tipo equipo",
    "read_only": 1
+  },
+  {
+   "fieldname": "fecha_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha de inicio"
+  },
+  {
+   "fieldname": "fecha_fin",
+   "fieldtype": "Date",
+   "label": "Fecha fin"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-22 10:33:24.465811",
+ "modified": "2025-09-22 14:01:32.133976",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-ASIGNACIONEQUIPODETALLE",

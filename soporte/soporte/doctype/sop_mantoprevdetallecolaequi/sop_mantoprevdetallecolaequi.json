@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-22 14:03:00.628942",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "link_colaborador",
+  "nombre_colaborador",
+  "unidad_colaborador",
+  "link_equipo",
+  "tipo_equipo",
+  "inventario_equipo"
+ ],
+ "fields": [
+  {
+   "fieldname": "link_colaborador",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Colaborador",
+   "options": "SOP-COLABORADOR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "link_colaborador.nombre_colaborador",
+   "fieldname": "nombre_colaborador",
+   "fieldtype": "Data",
+   "label": "nombre_colaborador"
+  },
+  {
+   "fetch_from": "link_colaborador.unidad",
+   "fieldname": "unidad_colaborador",
+   "fieldtype": "Data",
+   "label": "unidad_colaborador"
+  },
+  {
+   "fieldname": "link_equipo",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Equipo",
+   "options": "SOP-EQUIPO",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "link_equipo.tipo_equipo",
+   "fieldname": "tipo_equipo",
+   "fieldtype": "Data",
+   "label": "tipo_equipo"
+  },
+  {
+   "fetch_from": "link_equipo.numero_inventario",
+   "fieldname": "inventario_equipo",
+   "fieldtype": "Data",
+   "label": "inventario_equipo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-22 14:14:14.073021",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-MANTOPREVDETALLECOLAEQUI",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

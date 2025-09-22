@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-22 14:08:16.944090",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "link_asignacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "link_asignacion",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Asignaci\u00f3n",
+   "options": "SOP-ASIGNACIONEQUIPO",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-22 14:14:23.108453",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-MANTOPREVDETALLEASIGNACIONES",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

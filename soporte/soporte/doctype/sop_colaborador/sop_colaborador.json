@@ -18,6 +18,7 @@
   "dependencia",
   "cargo",
   "jefe_inmediato",
+  "activo_sistema",
   "equipo_asignado_tab",
   "html_asignaciones"
  ],
@@ -107,11 +108,17 @@
    "fieldname": "html_asignaciones",
    "fieldtype": "HTML",
    "label": "Asignaciones"
+  },
+  {
+   "default": "0",
+   "fieldname": "activo_sistema",
+   "fieldtype": "Check",
+   "label": "Activo en sistema (elaborar\u00e1 hoja de manto.)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-22 09:54:36.001655",
+ "modified": "2025-09-22 13:36:03.122719",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-COLABORADOR",
