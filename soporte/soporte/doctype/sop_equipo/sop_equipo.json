@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EQUIP-.######",
+ "creation": "2025-09-22 08:05:02.964455",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_generales_del_equipo_section",
+  "fecha_ingreso_direccion",
+  "numero_inventario",
+  "tipo_equipo",
+  "marca_equipo",
+  "column_break_zqnr",
+  "link_marca_equipo",
+  "modelo_equipo",
+  "numero_serie",
+  "activo_sistema",
+  "datos_de_equipo_computadora_section",
+  "tipo_cpu",
+  "nombre_equipo",
+  "marca_procesador",
+  "velocidad_procesador",
+  "nucleos_procesador",
+  "column_break_ifvo",
+  "memoria_ram",
+  "tipo_almacenamiento",
+  "cantidad_almacenamiento",
+  "direccion_ip",
+  "column_break_fmai",
+  "sistema_operativo",
+  "tipo_office",
+  "antivirus",
+  "otros_1",
+  "otros_2",
+  "otros_3",
+  "historial_de_asignaciones_tab",
+  "html_asignaciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "numero_inventario",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero de inventario",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "tipo_equipo",
+   "fieldtype": "Select",
+   "label": "Tipo de equipo",
+   "options": "Computadora\nTel\u00e9fono\nMonitor\nUps\nMouse\nTeclado",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_marca_equipo",
+   "fieldtype": "Link",
+   "label": "Marca de equipo",
+   "options": "SOP-MARCAEQUIPO",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "link_marca_equipo.nombre_marca",
+   "fieldname": "marca_equipo",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "marca_equipo"
+  },
+  {
+   "fieldname": "modelo_equipo",
+   "fieldtype": "Data",
+   "label": "Modelo de equipo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zqnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "numero_serie",
+   "fieldtype": "Data",
+   "label": "N\u00famero de serie",
+   "reqd": 1
+  },
+  {
+   "fieldname": "datos_generales_del_equipo_section",
+   "fieldtype": "Section Break",
+   "label": "Datos generales del equipo"
+  },
+  {
+   "depends_on": "eval:doc.tipo_equipo=='Computadora'",
+   "fieldname": "datos_de_equipo_computadora_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de equipo computadora"
+  },
+  {
+   "fieldname": "tipo_cpu",
+   "fieldtype": "Select",
+   "label": "Tipo de CPU",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
+   "options": "Escritorio\nLaptop"
+  },
+  {
+   "fieldname": "nombre_equipo",
+   "fieldtype": "Data",
+   "label": "Nombre del equipo",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'"
+  },
+  {
+   "fieldname": "marca_procesador",
+   "fieldtype": "Data",
+   "label": "Marca de procesador"
+  },
+  {
+   "fieldname": "velocidad_procesador",
+   "fieldtype": "Data",
+   "label": "Velocidad de procesador"
+  },
+  {
+   "fieldname": "memoria_ram",
+   "fieldtype": "Data",
+   "label": "Memoria RAM"
+  },
+  {
+   "fieldname": "column_break_ifvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cantidad_almacenamiento",
+   "fieldtype": "Data",
+   "label": "Cantidad de almacenamiento",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'"
+  },
+  {
+   "fieldname": "tipo_almacenamiento",
+   "fieldtype": "Select",
+   "label": "Tipo de unidad de almacenamiento",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
+   "options": "HHDD\nSSD"
+  },
+  {
+   "fieldname": "direccion_ip",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n IP",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'"
+  },
+  {
+   "fieldname": "nucleos_procesador",
+   "fieldtype": "Data",
+   "label": "N\u00facleos de procesador",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'"
+  },
+  {
+   "fieldname": "sistema_operativo",
+   "fieldtype": "Select",
+   "label": "Sistema Operativo",
+   "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
+   "options": "Windows 10 Pro\nWindows 7 Professional"
+  },
+  {
+   "fieldname": "column_break_fmai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_office",
+   "fieldtype": "Data",
+   "label": "Tipo de office"
+  },
+  {
+   "fieldname": "antivirus",
+   "fieldtype": "Data",
+   "label": "Antivirus"
+  },
+  {
+   "fieldname": "otros_1",
+   "fieldtype": "Data",
+   "label": "Otros (1)"
+  },
+  {
+   "fieldname": "otros_2",
+   "fieldtype": "Data",
+   "label": "Otros (2)"
+  },
+  {
+   "fieldname": "otros_3",
+   "fieldtype": "Data",
+   "label": "Otros (3)"
+  },
+  {
+   "default": "0",
+   "fieldname": "activo_sistema",
+   "fieldtype": "Check",
+   "label": "Activo en sistema"
+  },
+  {
+   "fieldname": "historial_de_asignaciones_tab",
+   "fieldtype": "Tab Break",
+   "label": "Historial de asignaciones"
+  },
+  {
+   "fieldname": "html_asignaciones",
+   "fieldtype": "HTML",
+   "label": "Asignaciones"
+  },
+  {
+   "fieldname": "fecha_ingreso_direccion",
+   "fieldtype": "Date",
+   "label": "Fecha de ingreso a la direcci\u00f3n",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-22 10:36:02.577634",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-EQUIPO",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "tipo_equipo,marca_equipo,modelo_equipo,numero_serie",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "numero_inventario"
+}

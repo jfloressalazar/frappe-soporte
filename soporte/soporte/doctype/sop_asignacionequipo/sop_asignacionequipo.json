@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-22 09:07:40.392423",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "selecci\u00f3n_de_colaborador_y_equipo_section",
+  "fecha_asignacion",
+  "link_colaborador",
+  "unidad_colaborador",
+  "column_break_vuqh",
+  "tbl_detalleasignacion",
+  "otros_check_section",
+  "cd_rom",
+  "column_break_gpda",
+  "fax",
+  "column_break_uhat",
+  "tarjeta_red",
+  "column_break_izkh",
+  "teclado",
+  "column_break_wxfz",
+  "mouse",
+  "column_break_hmif",
+  "parlantes",
+  "observaciones_section",
+  "observaciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "link_colaborador",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Colaborador",
+   "options": "SOP-COLABORADOR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vuqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "link_colaborador.unidad",
+   "fieldname": "unidad_colaborador",
+   "fieldtype": "Data",
+   "label": "Unidad de colaborador",
+   "read_only": 1
+  },
+  {
+   "fieldname": "selecci\u00f3n_de_colaborador_y_equipo_section",
+   "fieldtype": "Section Break",
+   "label": "Selecci\u00f3n de colaborador y equipo"
+  },
+  {
+   "fieldname": "otros_check_section",
+   "fieldtype": "Section Break",
+   "label": "Otros Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "cd_rom",
+   "fieldtype": "Check",
+   "label": "CD ROM/DVD"
+  },
+  {
+   "fieldname": "column_break_gpda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fax",
+   "fieldtype": "Check",
+   "label": "Fax/Modem"
+  },
+  {
+   "fieldname": "column_break_uhat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tarjeta_red",
+   "fieldtype": "Check",
+   "label": "Tarjeta de red"
+  },
+  {
+   "fieldname": "column_break_izkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "teclado",
+   "fieldtype": "Check",
+   "label": "Teclado"
+  },
+  {
+   "fieldname": "column_break_wxfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "mouse",
+   "fieldtype": "Check",
+   "label": "Mouse"
+  },
+  {
+   "default": "0",
+   "fieldname": "parlantes",
+   "fieldtype": "Check",
+   "label": "Parlantes"
+  },
+  {
+   "fieldname": "column_break_hmif",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "observaciones_section",
+   "fieldtype": "Section Break",
+   "label": "Observaciones"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Small Text",
+   "label": "Observaciones"
+  },
+  {
+   "fieldname": "tbl_detalleasignacion",
+   "fieldtype": "Table",
+   "label": "Equipos asignados",
+   "options": "SOP-ASIGNACIONEQUIPODETALLE"
+  },
+  {
+   "fieldname": "fecha_asignacion",
+   "fieldtype": "Date",
+   "label": "Fecha de asignaci\u00f3n",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-22 10:36:06.552588",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-ASIGNACIONEQUIPO",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

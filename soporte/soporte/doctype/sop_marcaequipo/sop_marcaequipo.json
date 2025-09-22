@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MARC-.####",
+ "creation": "2025-09-22 08:00:09.848599",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre_marca"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre_marca",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de marca",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-22 09:57:54.879276",
+ "modified_by": "Administrator",
+ "module": "Soporte",
+ "name": "SOP-MARCAEQUIPO",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nombre_marca"
+}

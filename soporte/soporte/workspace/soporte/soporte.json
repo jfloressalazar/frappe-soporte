@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}}]",
+ "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}},{\"id\":\"LNJf0g5_Nk\",\"type\":\"card\",\"data\":{\"card_name\":\"Equipos\",\"col\":4}}]",
  "creation": "2025-09-19 09:28:58.559236",
  "custom_blocks": [],
  "docstatus": 0,
@@ -70,9 +70,48 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipos",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marcas de equipo",
+   "link_count": 0,
+   "link_to": "SOP-MARCAEQUIPO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipos",
+   "link_count": 0,
+   "link_to": "SOP-EQUIPO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asignaciones de equipo",
+   "link_count": 0,
+   "link_to": "SOP-ASIGNACIONEQUIPO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-09-19 09:31:47.366690",
+ "modified": "2025-09-22 10:05:42.559771",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "Soporte",
