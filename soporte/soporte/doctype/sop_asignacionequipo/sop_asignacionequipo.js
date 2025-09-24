@@ -13,11 +13,12 @@ frappe.ui.form.on("SOP-ASIGNACIONEQUIPO", {
         });
     },
 
-    refresh: function(frm) {
-        frm.fields_dict["tbl_detalleasignacion"].grid.get_field("equipo").get_query = function(doc, cdt, cdn) {
+    refresh: function (frm) {
+        frm.fields_dict["tbl_detalleasignacion"].grid.get_field("equipo").get_query = function (doc, cdt, cdn) {
             return {
+                query: "soporte.soporte.doctype.sop_asignacionequipo.sop_asignacionequipo.get_available_equipment",  // tu método en Python
                 filters: {
-                    activo_sistema: 1
+                    fecha_actual: frappe.datetime.now_date()
                 }
             };
         };

@@ -169,7 +169,7 @@
    "fieldtype": "Select",
    "label": "Sistema Operativo",
    "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
-   "options": "Windows 10 Pro\nWindows 7 Professional"
+   "options": "Windows 10 Pro\nWindows 11 Pro\nWindows 7 Professional"
   },
   {
    "fieldname": "column_break_fmai",
@@ -241,7 +241,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-23 10:37:14.880558",
+ "modified": "2025-09-23 14:06:21.458222",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-EQUIPO",
