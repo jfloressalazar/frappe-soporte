@@ -1,7 +1,7 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}},{\"id\":\"LNJf0g5_Nk\",\"type\":\"card\",\"data\":{\"card_name\":\"Equipos\",\"col\":4}},{\"id\":\"_0GT4a4YdZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mantenimiento, historial e informes</b></span>\",\"col\":12}},{\"id\":\"WImOZTcEsw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Colaboradores totales\",\"col\":3}},{\"id\":\"CPp0GRFBY0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cantidad de equipo activo\",\"col\":3}},{\"id\":\"yFkzw0_f4B\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Equipo sin asignación\",\"col\":3}},{\"id\":\"mSiNEahsBw\",\"type\":\"card\",\"data\":{\"card_name\":\"Mantenimientos\",\"col\":4}}]",
+  "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}},{\"id\":\"LNJf0g5_Nk\",\"type\":\"card\",\"data\":{\"card_name\":\"Equipos\",\"col\":4}},{\"id\":\"_0GT4a4YdZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mantenimiento, historial e informes</b></span>\",\"col\":12}},{\"id\":\"WImOZTcEsw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Colaboradores totales\",\"col\":3}},{\"id\":\"CPp0GRFBY0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cantidad de equipo activo\",\"col\":3}},{\"id\":\"yFkzw0_f4B\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Equipo sin asignación\",\"col\":3}},{\"id\":\"mSiNEahsBw\",\"type\":\"card\",\"data\":{\"card_name\":\"Mantenimientos\",\"col\":4}},{\"id\":\"KO-YierxLa\",\"type\":\"card\",\"data\":{\"card_name\":\"Reportes\",\"col\":5}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -215,9 +215,43 @@
     "parentfield": "links",
     "parenttype": "Workspace",
     "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Reportes",
+    "link_count": 1,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Soporte",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 1,
+    "label": "Nómina general de equipos registrados en sistema",
+    "link_count": 0,
+    "link_to": "SOP-EQUIPO-NOMINA-ASIGNACIONES",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Soporte",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "type": "Link"
    }
   ],
-  "modified": "2025-09-24 09:02:56.324628",
+  "modified": "2025-09-26 11:03:48.404892",
   "module": "Soporte",
   "name": "Soporte",
   "number_cards": [

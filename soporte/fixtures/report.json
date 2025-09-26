@@ -1,0 +1,32 @@
+[
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-09-26 10:42:40.700073",
+  "module": "Soporte",
+  "name": "SOP-EQUIPO-NOMINA-ASIGNACIONES",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    e.name AS ID_EQUIPO,\r\n    e.numero_inventario AS INVENTARIO,\r\n    e.tipo_equipo AS TIPO,\r\n    e.marca_equipo AS MARCA,\r\n    e.modelo_equipo AS MODELO,\r\n    e.numero_serie AS SERIE,\r\n    CONCAT(c.apellidos_colaborador, ' ', c.nombres_colaborador) AS COLABORADOR,\r\n    c.unidad AS UNIDAD,\r\n    d.fecha_inicio,\r\n    d.fecha_fin,\r\n    CASE\r\n        WHEN d.name IS NULL THEN 'Disponible'\r\n        WHEN d.fecha_fin IS NULL THEN 'Asignado'\r\n        WHEN d.fecha_fin < CURDATE() THEN 'Disponible'\r\n        WHEN e.activo_sistema = false THEN 'Inactivo'\r\n        ELSE 'Disponible'\r\n    END AS ESTADO,\r\n    CASE\r\n        WHEN d.name IS NOT NULL THEN a.name\r\n        ELSE '-'\r\n    END AS ASIGNACION,\r\n    a.tipo_asignacion AS TIPO_ASIGNACION\r\nFROM\r\n    `tabSOP-EQUIPO` e\r\nLEFT JOIN `tabSOP-ASIGNACIONEQUIPODETALLE` d \r\n    ON d.equipo = e.name\r\n    AND (d.fecha_fin IS NULL OR d.fecha_fin = (\r\n        SELECT MAX(d2.fecha_fin)\r\n        FROM `tabSOP-ASIGNACIONEQUIPODETALLE` d2\r\n        WHERE d2.equipo = e.name\r\n    ))\r\nLEFT JOIN `tabSOP-ASIGNACIONEQUIPO` a \r\n    ON a.name = d.parent\r\nLEFT JOIN `tabSOP-COLABORADOR` c \r\n    ON a.link_colaborador = c.name\r\nORDER BY e.tipo_equipo, e.numero_inventario;\r\n",
+  "ref_doctype": "SOP-EQUIPO",
+  "reference_report": null,
+  "report_name": "SOP-EQUIPO-NOMINA-ASIGNACIONES",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "SOP-EQUIPO-NOMINA-ASIGNACIONES",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ]
+ }
+]

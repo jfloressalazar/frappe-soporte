@@ -248,4 +248,10 @@ fixtures = [
             ["name", "like", "SOP-%"]
         ]
     },
+    {
+        "dt": "Report",
+        "filters": [
+            ["name", "like", "SOP-%"]
+        ]
+    },
 ]
