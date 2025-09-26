@@ -133,7 +133,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reportes",
-   "link_count": 1,
+   "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -147,9 +147,29 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Historial de asignaciones por equipo",
+   "link_count": 0,
+   "link_to": "SOP-EQUIPO-HISTORIAL-ASIGNACIONES",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Historial de asignaciones por colaborador",
+   "link_count": 0,
+   "link_to": "SOP-COLABORADOR-HISTORIAL-ASIGNACIONES",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-09-26 11:03:48.404892",
+ "modified": "2025-09-26 15:23:10.112468",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "Soporte",

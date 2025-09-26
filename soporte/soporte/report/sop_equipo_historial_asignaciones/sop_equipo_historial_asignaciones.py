@@ -2,7 +2,7 @@ import frappe
 
 def execute(filters=None):
     columns = [
-        {"label": "COLABORADOR", "fieldname": "COLABORADOR", "fieldtype": "Link", "options": "SOP-EQUIPO", "width": 'auto'},
+        {"label": "COLABORADOR", "fieldname": "COLABORADOR", "fieldtype": "Data", "width": 'auto'},
         {"label": "UNIDAD", "fieldname": "UNIDAD", "fieldtype": "Data", "width": 'auto'},
         {"label": "FECHA_INICIO", "fieldname": "FECHA_INICIO", "fieldtype": "Date", "width": 'auto'},
         {"label": "FECHA_FIN", "fieldname": "FECHA_FIN", "fieldtype": "Date", "width": 'auto'},
@@ -21,7 +21,7 @@ def execute(filters=None):
                 CASE
                     WHEN d.fecha_fin IS NULL THEN 'Asignado'
                     WHEN e.activo_sistema = 0 THEN 'Equipo Inactivo'
-                    ELSE 'Finalizado'
+                    ELSE 'Asignación Finalizada'
                 END AS ESTADO,
                 a.tipo_asignacion AS TIPO_ASIGNACION
             FROM `tabSOP-ASIGNACIONEQUIPODETALLE` d

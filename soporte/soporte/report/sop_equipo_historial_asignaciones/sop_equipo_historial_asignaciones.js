@@ -4,7 +4,7 @@ frappe.query_reports["SOP-EQUIPO-HISTORIAL-ASIGNACIONES"] = {
             fieldname: "equipo",
             label: __("Equipo"),
             fieldtype: "Link",
-            options: "tabSOP-EQUIPO",
+            options: "SOP-EQUIPO",
             reqd: 1
         }
     ]
