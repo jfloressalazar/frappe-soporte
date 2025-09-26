@@ -242,4 +242,10 @@ fixtures = [
             ]]
         ]
     },
+    {
+        "dt": "Print Format",
+        "filters": [
+            ["name", "like", "SOP-%"]
+        ]
+    },
 ]

@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-
+from frappe.utils import today
 
 class SOPASIGNACIONEQUIPO(Document):
 	pass
@@ -32,3 +32,17 @@ def get_available_equipment(doctype, txt, searchfield, start, page_len, filters)
 		"page_len": page_len,
 		"fecha_actual": fecha_actual
 	})
+
+@frappe.whitelist()
+def get_available_equipment_count():
+    disponibles = frappe.db.sql("""
+        SELECT COUNT(*) 
+        FROM `tabSOP-EQUIPO` e
+        WHERE e.activo_sistema = 1
+        AND NOT EXISTS (
+            SELECT 1 FROM `tabSOP-ASIGNACIONEQUIPODETALLE` d
+            WHERE d.equipo = e.name
+              AND (d.fecha_fin IS NULL OR d.fecha_fin > %(hoy)s)
+        )
+    """, {"hoy": today()})[0][0]
+    return disponibles

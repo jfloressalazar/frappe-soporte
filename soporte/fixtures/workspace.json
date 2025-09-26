@@ -1,7 +1,7 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}},{\"id\":\"LNJf0g5_Nk\",\"type\":\"card\",\"data\":{\"card_name\":\"Equipos\",\"col\":4}},{\"id\":\"_0GT4a4YdZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mantenimiento, historial e informes</b></span>\",\"col\":12}},{\"id\":\"mSiNEahsBw\",\"type\":\"card\",\"data\":{\"card_name\":\"Mantenimientos\",\"col\":4}}]",
+  "content": "[{\"id\":\"Fdh2xIOujL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Soporte</span>\",\"col\":12}},{\"id\":\"7EwRJAFC0C\",\"type\":\"card\",\"data\":{\"card_name\":\"Ubicaciones\",\"col\":4}},{\"id\":\"NWv72MJUZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Colaboradores\",\"col\":4}},{\"id\":\"LNJf0g5_Nk\",\"type\":\"card\",\"data\":{\"card_name\":\"Equipos\",\"col\":4}},{\"id\":\"_0GT4a4YdZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mantenimiento, historial e informes</b></span>\",\"col\":12}},{\"id\":\"WImOZTcEsw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Colaboradores totales\",\"col\":3}},{\"id\":\"CPp0GRFBY0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cantidad de equipo activo\",\"col\":3}},{\"id\":\"yFkzw0_f4B\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Equipo sin asignación\",\"col\":3}},{\"id\":\"mSiNEahsBw\",\"type\":\"card\",\"data\":{\"card_name\":\"Mantenimientos\",\"col\":4}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -217,10 +217,32 @@
     "type": "Link"
    }
   ],
-  "modified": "2025-09-22 14:19:29.760111",
+  "modified": "2025-09-24 09:02:56.324628",
   "module": "Soporte",
   "name": "Soporte",
-  "number_cards": [],
+  "number_cards": [
+   {
+    "label": "Colaboradores totales",
+    "number_card_name": "Colaboradores_totales",
+    "parent": "Soporte",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Equipo sin asignación",
+    "number_card_name": "Equipo_sin_asignar",
+    "parent": "Soporte",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Cantidad de equipo activo",
+    "number_card_name": "Equipo_total",
+    "parent": "Soporte",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
   "parent_page": "",
   "public": 1,
   "quick_lists": [],
