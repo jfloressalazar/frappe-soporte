@@ -10,6 +10,36 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
+  "modified": "2025-09-26 13:46:57.377717",
+  "module": "Soporte",
+  "name": "SOP-EQUIPO-HISTORIAL-ASIGNACIONES",
+  "prepared_report": 0,
+  "query": "",
+  "ref_doctype": "SOP-EQUIPO",
+  "reference_report": null,
+  "report_name": "SOP-EQUIPO-HISTORIAL-ASIGNACIONES",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "SOP-EQUIPO-HISTORIAL-ASIGNACIONES",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
   "modified": "2025-09-26 10:42:40.700073",
   "module": "Soporte",
   "name": "SOP-EQUIPO-NOMINA-ASIGNACIONES",

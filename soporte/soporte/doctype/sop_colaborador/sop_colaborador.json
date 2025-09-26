@@ -19,7 +19,7 @@
   "cargo",
   "jefe_inmediato",
   "activo_sistema",
-  "equipo_asignado_tab",
+  "section_break_fjzg",
   "html_asignaciones"
  ],
  "fields": [
@@ -100,11 +100,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "equipo_asignado_tab",
-   "fieldtype": "Tab Break",
-   "label": "Historial de asignaciones"
-  },
-  {
    "fieldname": "html_asignaciones",
    "fieldtype": "HTML",
    "label": "Asignaciones"
@@ -114,11 +109,15 @@
    "fieldname": "activo_sistema",
    "fieldtype": "Check",
    "label": "Activo en sistema (elaborar\u00e1 hoja de manto.)"
+  },
+  {
+   "fieldname": "section_break_fjzg",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-22 13:36:03.122719",
+ "modified": "2025-09-26 13:30:34.435313",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-COLABORADOR",

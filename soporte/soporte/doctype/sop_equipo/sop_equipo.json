@@ -36,7 +36,7 @@
   "otros_1",
   "otros_2",
   "otros_3",
-  "historial_de_asignaciones_tab",
+  "section_break_vhnu",
   "html_asignaciones"
  ],
  "fields": [
@@ -209,11 +209,6 @@
    "label": "Activo en sistema"
   },
   {
-   "fieldname": "historial_de_asignaciones_tab",
-   "fieldtype": "Tab Break",
-   "label": "Historial de asignaciones"
-  },
-  {
    "fieldname": "html_asignaciones",
    "fieldtype": "HTML",
    "label": "Asignaciones"
@@ -236,11 +231,15 @@
    "fieldtype": "Select",
    "label": "En calidad de",
    "options": "Asignado a direcci\u00f3n\nPr\u00e9stamo a direcci\u00f3n"
+  },
+  {
+   "fieldname": "section_break_vhnu",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-24 10:33:43.487219",
+ "modified": "2025-09-26 13:30:16.270531",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-EQUIPO",
