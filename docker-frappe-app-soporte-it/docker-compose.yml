@@ -1,0 +1,50 @@
+networks:
+  soporte-app_network:
+    driver: bridge
+
+services:
+  soporte-mariadb-database-1:
+    image: mariadb:10.6.20
+    container_name: soporte-app-db-1
+    environment:
+      MARIADB_USER: adm_dev_soporte_app
+      MARIADB_PASSWORD: Desarrollo
+      MARIADB_ROOT_PASSWORD: Desarrollo
+      MARIADB_DATABASE: soporte_appdb
+    ports:
+      - "3386:3306"
+    volumes:
+      - soporte_mariadb_data:/var/lib/mysql
+    networks:
+      - soporte-app_network
+
+  soporte_ubuntu_backend_1:
+    build:
+      context: .  # El directorio donde está el Dockerfile (puede cambiar si está en otra carpeta)
+      dockerfile: ./Dockerfile  # Asegúrate de que la ruta al Dockerfile sea correcta 
+    image: soporte-app-ubuntu:custom
+    container_name: soporte-app-backend-1
+    tty: true
+    ports:
+      - "8977:8000"
+      - "8978:80"
+      - "8979:443"
+    volumes:
+      - soporte_ubuntu_home:/home  # Volumen compartido para /home
+      - soporte_ubuntu_usr:/usr  # Volumen compartido para /usr
+      - soporte_ubuntu_etc:/etc  # Volumen compartido para /etc
+      - soporte_ubuntu_var:/var  # Volumen compartido para /var
+      - ./backups:/home/frappe/backups
+      - ./fixtures:/home/frappe/fixtures
+    networks:
+      - soporte-app_network
+      
+    
+volumes:
+  soporte_mariadb_data:
+  soporte_ubuntu_home: 
+  soporte_ubuntu_usr: 
+  soporte_ubuntu_etc: 
+  soporte_ubuntu_var:  
+  soporte_redis_short_data2:
+  soporte_redis_long_data2:
