@@ -111,7 +111,7 @@
    "fieldtype": "Select",
    "label": "Tipo de CPU",
    "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
-   "options": "Escritorio\nLaptop"
+   "options": "\nEscritorio\nLaptop"
   },
   {
    "fieldname": "nombre_equipo",
@@ -149,7 +149,7 @@
    "fieldtype": "Select",
    "label": "Tipo de unidad de almacenamiento",
    "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
-   "options": "HHDD\nSSD"
+   "options": "\nHHDD\nSSD"
   },
   {
    "fieldname": "direccion_ip",
@@ -168,7 +168,7 @@
    "fieldtype": "Select",
    "label": "Sistema Operativo",
    "mandatory_depends_on": "eval:doc.tipo_equipo=='Computadora'",
-   "options": "Windows 10 Pro\nWindows 11 Pro\nWindows 7 Professional"
+   "options": "\nWindows 10 Pro\nWindows 11 Pro\nWindows 7 Professional"
   },
   {
    "fieldname": "column_break_fmai",
@@ -239,7 +239,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-26 13:30:16.270531",
+ "modified": "2025-09-30 07:36:45.157364",
  "modified_by": "Administrator",
  "module": "Soporte",
  "name": "SOP-EQUIPO",
